@@ -16,8 +16,14 @@ var (
 	skipElement    = fmt.Errorf("skip element")
 )
 
+func NewRenderer() renderer.Renderer {
+	return &Renderer{}
+}
+
 type Renderer struct {
 }
+
+var _ renderer.Renderer = &Renderer{}
 
 func (r *Renderer) renderChildren(src []byte, n ast.Node, hook func(n ast.Node, generated string) (string, error)) (string, error) {
 	if !n.HasChildren() {
