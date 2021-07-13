@@ -75,7 +75,6 @@ func (r *Renderer) renderChildren(src []byte, n ast.Node, hook func(n ast.Node, 
 
 func (r *Renderer) autoLink(src []byte, n *ast.AutoLink) (string, error) {
 	return "", unhandledError
-
 }
 func (r *Renderer) blockquote(src []byte, n *ast.Blockquote) (string, error) {
 	s, err := r.renderChildren(src, n, nil)
@@ -139,7 +138,6 @@ func (r *Renderer) fencedCodeBlock(src []byte, n *ast.FencedCodeBlock) (string, 
 }
 func (r *Renderer) htmlBlock(src []byte, n *ast.HTMLBlock) (string, error) {
 	return "", unhandledError
-
 }
 func (r *Renderer) heading(src []byte, n *ast.Heading) (string, error) {
 	level := n.Level
@@ -188,13 +186,10 @@ func (r *Renderer) listItem(src []byte, n *ast.ListItem) (string, error) {
 	})
 }
 func (r *Renderer) paragraph(src []byte, n *ast.Paragraph) (string, error) {
-
 	return "", unhandledError
-
 }
 func (r *Renderer) rawHTML(src []byte, n *ast.RawHTML) (string, error) {
 	return "", unhandledError
-
 }
 func (r *Renderer) stringNode(src []byte, n *ast.String) (string, error) {
 	return "", unhandledError
@@ -210,7 +205,6 @@ func (r *Renderer) text(src []byte, n *ast.Text) (string, error) {
 }
 func (r *Renderer) textBlock(src []byte, n *ast.TextBlock) (string, error) {
 	return "", unhandledError
-
 }
 func (r *Renderer) thematicBreak(src []byte, n *ast.ThematicBreak) (string, error) {
 	return "", skipElement
@@ -218,35 +212,27 @@ func (r *Renderer) thematicBreak(src []byte, n *ast.ThematicBreak) (string, erro
 
 func (r *Renderer) definitionDescription(src []byte, n *east.DefinitionDescription) (string, error) {
 	return "", unhandledError
-
 }
 func (r *Renderer) definitionList(src []byte, n *east.DefinitionList) (string, error) {
 	return "", unhandledError
-
 }
 func (r *Renderer) definitionTerm(src []byte, n *east.DefinitionTerm) (string, error) {
 	return "", unhandledError
-
 }
 func (r *Renderer) footnote(src []byte, n *east.Footnote) (string, error) {
 	return "", unhandledError
-
 }
 func (r *Renderer) footnoteBacklink(src []byte, n *east.FootnoteBacklink) (string, error) {
 	return "", unhandledError
-
 }
 func (r *Renderer) footnoteLink(src []byte, n *east.FootnoteLink) (string, error) {
 	return "", unhandledError
-
 }
 func (r *Renderer) footnoteList(src []byte, n *east.FootnoteList) (string, error) {
 	return "", unhandledError
-
 }
 func (r *Renderer) strikethrough(src []byte, n *east.Strikethrough) (string, error) {
 	return "", unhandledError
-
 }
 func (r *Renderer) table(src []byte, n *east.Table) (string, error) {
 	alignments := n.Alignments
@@ -301,19 +287,15 @@ func (r *Renderer) table(src []byte, n *east.Table) (string, error) {
 }
 func (r *Renderer) tableCell(src []byte, n *east.TableCell) (string, error) {
 	return "", unhandledError
-
 }
 func (r *Renderer) tableHeader(src []byte, n *east.TableHeader) (string, error) {
 	return "", unhandledError
-
 }
 func (r *Renderer) tableRow(src []byte, n *east.TableRow) (string, error) {
 	return "", unhandledError
-
 }
 func (r *Renderer) taskCheckBox(src []byte, n *east.TaskCheckBox) (string, error) {
 	return "", unhandledError
-
 }
 
 func (r *Renderer) render(src []byte, n ast.Node) (s string, err error) {
